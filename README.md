@@ -1,100 +1,75 @@
-![nuxt-wp banner](./readme-banner.jpg)
+# Nuxt Minimal Starter
 
-# Wordpress x Nuxt 3
+Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-![npm](https://img.shields.io/npm/dt/nuxt-wp)
-![npm](https://img.shields.io/npm/v/nuxt-wp)
+## Setup
 
-**Easy queries** 💡
-  Get pages, posts data based on current or provided slug. Get posts by categories.
-  
-**Handles menu** 🧭 
-  Retrieves your menus.
+Make sure to install dependencies:
 
-**Contact Form 7 support** ✉️
-  Displays a form based on your CF7 config and submit it automatically through API.
+```bash
+# npm
+npm install
 
-[Documentation](https://nuxt-wp.pages.dev).
+# pnpm
+pnpm install
 
-# Getting Started
+# yarn
+yarn install
 
-## Prerequisites
-
-- [Node.js](https://nodejs.org/) version 18 or higher.
-- An accessible Wordpress instance, with API enabled.
-- [Wordpress Application credentials](https://make.wordpress.org/core/2020/11/05/application-passwords-integration-guide/) to use advanced features (Optional):
-  - Menus
-  - Contact form
-
-## Installation
-
-### Setup
-
-You can install `nuxt-wp` using npm, pnpm, yarn or bun:
-
-```sh
-# Using npm
-$ npm add -D nuxt-wp
-
-# Using pnpm
-$ pnpm add -D nuxt-wp
-
-# Using yarn
-$ yarn add -D nuxt-wp
-
-# Using bun
-$ bun add -D nuxt-wp
+# bun
+bun install
 ```
 
-Then, add `nuxt-wp` to your Nuxt configuration:
+## Development Server
 
-```ts
-// nuxt-config.ts
-export default defineNuxtConfig({
-  modules: ['nuxt-wp'],
-})
+Start the development server on `http://localhost:3000`:
+
+```bash
+# npm
+npm run dev
+
+# pnpm
+pnpm dev
+
+# yarn
+yarn dev
+
+# bun
+bun run dev
 ```
 
-### Config
+## Production
 
-In order to work, you need to provide the API endpoint:
+Build the application for production:
 
-```sh
-# .env
-WP_API_ENDPOINT=https://your-wordpress-site.com/wp-json
+```bash
+# npm
+npm run build
+
+# pnpm
+pnpm build
+
+# yarn
+yarn build
+
+# bun
+bun run build
 ```
 
-```ts
-// nuxt-config.ts
-export default defineNuxtConfig({
-  wordpress:{
-    apiEndpoint: 'https://your-wordpress-site.com/wp-json',
-  },
-})
+Locally preview production build:
+
+```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
 ```
 
-If you want to use advanced features, you need to provide Application Credentials too:
-
-```sh
-# .env
-WP_API_ENDPOINT=https://your-wordpress-site.com/wp-json
-WP_APPLICATION_USER=your-username
-WP_APPLICATION_PASSWORD=your-password
-```
-
-```ts
-// nuxt-config.ts
-export default defineNuxtConfig({
-  wordpress:{
-    apiEndpoint: 'https://your-wordpress-site.com/wp-json
-
-',
-
-
-    applicationUser: 'your-username',
-    applicationPassword: 'your-password'
-  },
-})
-```
-
-See more in [Documentation](https://nuxt-wp.pages.dev).
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
